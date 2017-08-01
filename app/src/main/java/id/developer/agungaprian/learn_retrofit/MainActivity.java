@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
-        Call<MovieResponse> call = apiService.loadMovies("popular", BuildConfig.API_KEY);
+        Call<MovieResponse> call = apiService.loadMovies( BuildConfig.API_KEY);
         call.enqueue(new Callback<MovieResponse>() {
             @Override
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
